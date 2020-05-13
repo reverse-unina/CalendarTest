@@ -1,9 +1,22 @@
 package calendario;
 
+
+/**
+ * Classe che contiene tutti i metodi per la consultazione del calendario perpetuo
+ * @author Porfirio
+ * @version 1.0
+ */
 public class Calendario {
 
+	/** Variabile statica che indica il numero del mese */
 	static int m;
 	
+	/**
+	 * Metodo main che ci consente una prima prova di tentativo
+	 *
+	 * @param args il primo e' il giorno del mese, il secondo il mese in italiano, il terzo l'anno 
+	 * @return giorno della settimana corrispondente alla data richiesta
+	 */
 	public static String main(String[] args) {
 		if (args.length==3){
 			int giorno=Integer.parseInt(args[0]);
@@ -18,6 +31,14 @@ public class Calendario {
 	}
 
 	
+	/**
+	 * Metodo che calcola il giorno della settimana della data inserita, nel caso sia una data esistente nel calendario
+	 *
+	 * @param d giorno del mese (intero)
+	 * @param ms mese dell'anno in italiano con iniziale minuscola
+	 * @param a anno (intero)
+	 * @return il giorno della settimana (in italiano, con iniziale maiuscola, senza accento) se la data esiste, altrimenti restituisce "Errore"
+	 */
 	public static String giornoDellaSettimana(int d, String ms, int a)
 	{
 		m = 0;
@@ -104,7 +125,15 @@ private static boolean valida(int d, int m, int a) {
 */
 
 
-	public static boolean valida(final int d, int m, int a) {
+	/**
+ * Funzione che verifica se la data esiste nel calendario
+ *
+ * @param d giorno del mese (intero)
+ * @param m mese dell'anno (intero, compreso tra 1 e 12)
+ * @param a anno (intero)
+ * @return true, se la data esiste, false altrimenti
+ */
+public static boolean valida(final int d, int m, int a) {
 		if (d<1 || d>31 || m==0 || a<=1582) 
 			return false;
 		Boolean bisestile= (a%4==0);
@@ -121,6 +150,14 @@ private static boolean valida(int d, int m, int a) {
 		
 	}
 
+	/**
+	 * Algoritmo di calcolo del giorno della settimana nel calendario perpetuo.
+	 *
+	 * @param d giorno (intero)
+	 * @param m mese (intero tra 1 e 12)
+	 * @param a anno (intero)
+	 * @return il giorno della settimana (in italiano, con iniziale maiuscola, senza accento) se la data esiste, altrimenti restituisce "Errore"
+	 */
 	public static String calend(int d, int m, int a)
 	{		
 		if (m<=2)
@@ -140,6 +177,12 @@ private static boolean valida(int d, int m, int a) {
 	}
 
 
+	/**
+	 * Trasforma il giorno della settimana numerico nel giorno della settimana in italiano con iniziale maiuscola e senza accento.
+	 *
+	 * @param n numero del giorno della settimana (intero tra 0 e 6; 0 indica Domenica, 1 Lunedi e cosi' via)
+	 * @return il giorno della settimana (in italiano, con iniziale maiuscola, senza accento) se la data esiste, altrimenti restituisce "Errore"
+	 */
 	public static String convert(int n) {
 		 if (n==1) {
 			return "Lunedi";

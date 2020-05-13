@@ -50,11 +50,18 @@ public class TestValida {
 		assertTrue(Calendario.valida(29, 2, 2020));
 	}
 	
+	/**
+	 * Test valida 6.
+	 */
 	//prova primo commit mauro
 	@Test
 	public void testValida6() {
 		assertTrue(Calendario.valida(29, 2, 2020));
 	}
+	
+	/**
+	 * Test valida 7.
+	 */
 	//prova secondo commit mauro
 	@Test
 	public void testValida7() {

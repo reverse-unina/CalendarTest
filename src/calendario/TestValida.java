@@ -26,4 +26,8 @@ public class TestValida {
 	public void testValida5() {
 		assertTrue(Calendario.valida(29, 2, 2020));
 	}
+	@Test
+	public void testValida6() {
+		assertTrue(Calendario.valida(29, 2, 2020));
+	}
 }

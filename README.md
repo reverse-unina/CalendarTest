@@ -1,1 +1,1 @@
-Piccola modifica al readme per provare le opzioni di Pull
+Altra piccola modifica al readme per provare Fetch from origin

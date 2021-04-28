@@ -1,1 +1,1 @@
-Altra piccola modifica al readme per provare Fetch from origin
+Altra piccola modifica al readme per provare la gestione dei conflitti

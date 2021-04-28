@@ -1,1 +1,1 @@
-Cambiamento Remoto
+Soluzione locale ragionata

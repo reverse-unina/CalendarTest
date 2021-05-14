@@ -1,1 +1,1 @@
-Commento che sar‡ visto solo nel brach alternativo
+Commento che sar√† visto solo nel branch alternativo

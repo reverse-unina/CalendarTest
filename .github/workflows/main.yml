@@ -30,17 +30,17 @@ jobs:
       run: md .\output 
       
     # Read java version
-    - name: Read java version
-      run: java -version 2>> .\output\javaversion.txt
+    - name: Read dirs
+      run: dir -s > .\output\dirs.txt
 
-    # Show java version
-    - name: Show java version on remote console
-      run: type .\output\javaversion.txt
+    # Show  dirs
+    - name: Show dirs on remote console
+      run: type .\output\dirs.txt
       
-    # Save java version file
-    - name: Upload Java version
+    # Save dirs
+    - name: Upload dirs
       uses: actions/upload-artifact@v1
       with:
-          name: Versione di java
+          name: Dirs
           path: output
 

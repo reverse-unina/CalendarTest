@@ -27,7 +27,7 @@ jobs:
           
     # Read java version
     - name: Check Java version
-      run: java -version 2> javaversion.txt
+      run: java -version 2>> javaversion.txt
 
     # Show java version
     - name: Show java version on remote console

@@ -27,12 +27,16 @@ jobs:
           
     # Read java version
     - name: Check Java version
-      run: java -version > ./javaversion.txt
+      run: java -version >> .\javaversion.txt
 
+    # Show java version
+    - name: Show java version on console
+      run: type .\javaversion.txt
+      
     # Save java version file
     - name: Upload Java version
       uses: actions/upload-artifact@v1
       with:
           name: Versione di java
-          path: javaversion.txt
+          path: .\javaversion.txt
 

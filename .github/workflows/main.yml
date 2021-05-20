@@ -25,11 +25,13 @@ jobs:
       with:
           java-version: 1.8
           
+    # Create output directory
+    - name: Create output dir
+      run: md .\output 
+      
     # Read java version
-    - name: Check Java version
-      run: |
-          md .\output 
-          java -version 2>> .\output\javaversion.txt
+    - name: Read java version
+      run: java -version 2>> .\output\javaversion.txt
 
     # Show java version
     - name: Show java version on remote console

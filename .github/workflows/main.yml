@@ -27,10 +27,10 @@ jobs:
           
     # Read java version
     - name: Check Java version
-      run: dir >> javaversion.txt
+      run: java -version 2> javaversion.txt
 
     # Show java version
-    - name: Show java version on console
+    - name: Show java version on remote console
       run: type javaversion.txt
       
     # Save java version file
